@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-12-11T14:55:09.020Z",
+    "end": "2021-12-11T14:55:42.084Z",
+    "duration": 33064,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "77db81c9-066d-4760-8fb4-b79b3d0cc57f",
+      "title": "",
+      "fullFile": "cypress/integration/examples/SignUp.spec.js",
+      "file": "cypress/integration/examples/SignUp.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d0c056fc-3b74-46a5-827d-6ca0e4588c91",
+          "title": "Sign Up",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "User should be able to registrate new account",
+              "fullTitle": "Sign Up User should be able to registrate new account",
+              "timedOut": null,
+              "duration": 32923,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');\nuserSignUp.homePage().should('have.attr', 'data-navigation', 'log-in').click();\nuserSignUp.signUpBtn().should('contain', 'SIGN UP').click();\nuserSignUp.plansUrl().should('include', '/plans');\nuserSignUp.essentialsTitle().and('contain', 'Everything needed to get started collecting customer feedback');\nuserSignUp.essentialsBtn().should('have.attr', 'data-plans-cta', 'Essentials|button').click({ force: true });\nuserSignUp.modalWdw().should('be.visible');\nuserSignUp.modalTitle();\nuserSignUp.firstName().click().type(user.userFirstName);\nuserSignUp.lastName().type(user.userLastName);\nuserSignUp.jobTitle().type(user.userJobTitle);\nuserSignUp.workEmail().type(user.userEmail);\nuserSignUp.phone().type('1234567');\nuserSignUp.companyName().type(user.userFirstName);\nuserSignUp.employesNum().select('1 - 10');\nuserSignUp.businessUseCase().select('Multiple projects in my department');\nuserSignUp.country().select('Belgium');\nuserSignUp.checkBox().check();\nuserSignUp.submitBtn().click();\nuserSignUp.modalEssentialsSubmit().should('be.visible');\nuserSignUp.modalMessage().should('contain', 'One of our team members will be in touch shortly.');\nuserSignUp.buttonClose().click();",
+              "err": {},
+              "uuid": "3d39fbb2-8135-4d62-8204-4447eba9c3d5",
+              "parentUUID": "d0c056fc-3b74-46a5-827d-6ca0e4588c91",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3d39fbb2-8135-4d62-8204-4447eba9c3d5"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 32923,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "integration-reports/integration/reports/mocha",
+        "quiet": true,
+        "html": false,
+        "overwrite": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

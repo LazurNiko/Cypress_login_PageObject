@@ -24,8 +24,7 @@ module.exports = (on, config) => {
         userFirstName: faker.name.firstName() + `${Math.round(Math.random() * 100000)}`,
         userLastName: faker.name.lastName() + `${Math.round(Math.random() * 100000)}`,
         userJobTitle: faker.name.title() + `${Math.round(Math.random() * 100000)}`,
-        userEmail: 'test' + `${Math.round(Math.random() * 100000)}` + '@mail.com',
-        // userPhone: faker.name.Number() + `${Math.round(Math.random() * 100000)}`,
+        userEmail: 'test' + `${Math.round(Math.random() * 100000)}` + '@lazur.com',
         userCompany: faker.name.firstName() + `${Math.round(Math.random() * 100000)}`
       };
       return user;
